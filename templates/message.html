@@ -1,18 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Send Message</title>
+    <meta charset="UTF-8">
+    <title>Messages</title>
+    <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-    <h1>Send Message</h1>
-    <form action="/message" method="post">
-        <input type="text" name="username" placeholder="Your name" required>
-        <br><br>
-        <textarea name="message" placeholder="Your message" required></textarea>
-        <br><br>
-        <button type="submit">Send</button>
-    </form>
-    <br>
-    <a href="/">Back to home</a>
+<h1>Messages</h1>
+
+<form method="post" action="/send">
+    <input type="text" name="username" placeholder="Your name" required>
+    <input type="text" name="message" placeholder="Message" required>
+    <button type="submit">Send</button>
+</form>
+
+<div id="messages">
+    {{messages}}
+</div>
+
+<a href="/">Go Home</a>
 </body>
 </html>
