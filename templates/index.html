@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <title>My Web App</title>
     <link rel="stylesheet" href="/static/style.css">
+    <title>Home</title>
 </head>
 <body>
-    <header>
-        <img src="/static/logo.png" alt="Logo" width="100">
-        <h1>My Web App</h1>
-    </header>
+    <div class="logo">
+        <img src="/static/logo.png" alt="Logo">
+    </div>
 
-    <main>
-        <div class="buttons">
-            <a href="/message"><button>Send Message</button></a>
-            <a href="/message"><button>View Messages</button></a>
-        </div>
-    </main>
+    <h1>🏠 Welcome!</h1>
+
+    <!-- Контейнер для кнопок, как на странице формы -->
+    <div class="form-container">
+        <a href="/message" class="btn">Send Message</a>
+        <a href="/view-message" class="btn">View Messages</a>
+    </div>
 </body>
 </html>

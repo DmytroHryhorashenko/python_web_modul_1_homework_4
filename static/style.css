@@ -1,42 +1,234 @@
 body {
-    font-family: Arial;
-    background: #f4f6f9;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
     text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
-.container {
-    margin-top: 50px;
-}
-
-.logo {
-    width: 150px;
-}
-
-.menu a {
+.logo img {
+    width: 120px;
+    margin: 30px auto 20px;
     display: block;
-    margin: 10px;
-    padding: 10px;
-    background: #4CAF50;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
 }
 
-form {
+h1 {
+    margin-bottom: 40px;
+    color: #333;
+}
+/* ===== СООБЩЕНИЯ (View Messages) ===== */
+
+/* Карточка сообщения */
+.message-box {
+    width: 100%;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Текст сообщения */
+.message-text {
+    text-align: left;
+    word-break: break-word;
+    font-size: 15px;
+    color: #333;
+}
+
+/* Маленькая кнопка Delete */
+.btn.small {
+    width: auto;
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 20px;
+}
+
+/* Если нет сообщений */
+.form-container p {
+    color: #777;
+    font-size: 16px;
+}
+
+/* Контейнер для формы и кнопок */
+.form-container {
     display: flex;
     flex-direction: column;
-    width: 300px;
+    align-items: center;  /* центрируем все элементы */
+    gap: 20px;            /* отступы между элементами */
+    max-width: 500px;
+    margin: 50px auto;    /* центрирование по горизонтали */
+}
+
+/* Поля ввода */
+.form-container input,
+.form-container textarea {
+    width: 100%;           /* занимают всю ширину контейнера */
+    padding: 12px 15px;
+    border-radius: 25px;   /* закругленные края */
+    border: 1px solid #ccc;
+    font-size: 16px;
+    outline: none;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+/* Высота textarea */
+.form-container textarea {
+    min-height: 100px;
+}
+
+/* Кнопки */
+.form-container .btn {
+    display: inline-block;
+    width: 100%;        /* одинаковая ширина */
+    text-align: center;
+    padding: 14px 0;
+    border-radius: 35px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(145deg, #28a745, #3edc68);
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+    transition: all 0.3s ease;
+}
+
+.form-container .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+    background: linear-gradient(145deg, #3edc68, #28a745);
+}
+
+.form-container .btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+/* ===== КРАСИВЫЕ СООБЩЕНИЯ ===== */
+
+.message-box {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto 15px;
+
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 15px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+/* Блок текста */
+.message-content {
+    text-align: left;
+}
+
+/* Имя */
+.message-user {
+    font-weight: bold;
+    color: #28a745;
+    margin-bottom: 5px;
+}
+
+/* Сообщение */
+.message-text {
+    color: #333;
+    font-size: 15px;
+    word-break: break-word;
+}
+
+/* Маленькая кнопка */
+.btn.small {
+    padding: 8px 14px;
+    font-size: 13px;
+    border-radius: 20px;
+    width: auto;
+}
+
+/* Центрирование блока */
+.form-container {
+    align-items: center;
+}
+/* Красивые сообщения */
+.message-box {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto 15px;
+
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 15px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.message-content {
+    text-align: left;
+}
+
+.message-user {
+    font-weight: bold;
+    color: #28a745;
+    margin-bottom: 5px;
+}
+
+.message-text {
+    color: #333;
+    font-size: 15px;
+}
+
+.btn.small {
+    padding: 8px 14px;
+    font-size: 13px;
+    border-radius: 20px;
+    width: auto;
+}
+body { text-align: center; font-family: Arial; background: #f5f5f5; }
+
+.form-container {
+    max-width: 500px;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 input, textarea {
-    margin: 10px 0;
     padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
 }
 
-button {
-    padding: 10px;
-    background: #2196F3;
+.btn {
+    background: #28a745;
     color: white;
+    padding: 12px;
+    border-radius: 25px;
+    text-decoration: none;
     border: none;
+    cursor: pointer;
+}
+
+.message-box {
+    background: white;
+    padding: 15px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
 }

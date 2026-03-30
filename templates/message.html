@@ -1,23 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <title>Messages</title>
     <link rel="stylesheet" href="/static/style.css">
+    <title>Message Page</title>
 </head>
 <body>
-<h1>Messages</h1>
+    <div class="logo">
+        <img src="/static/logo.png" alt="Logo">
+    </div>
 
-<form method="post" action="/send">
-    <input type="text" name="username" placeholder="Your name" required>
-    <input type="text" name="message" placeholder="Message" required>
-    <button type="submit">Send</button>
-</form>
+    <h1>💬 Send a Message</h1>
 
-<div id="messages">
-    {{messages}}
-</div>
-
-<a href="/">Go Home</a>
+    <div class="form-container">
+        <form method="post" action="/send">
+            <input type="text" name="username" placeholder="Your Name" required>
+            <textarea name="message" placeholder="Write your message..." required></textarea>
+            <button type="submit" class="btn">Send</button>
+        </form>
+        <a href="/" class="btn">Go Home</a>
+    </div>
 </body>
 </html>
